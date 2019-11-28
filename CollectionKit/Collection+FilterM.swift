@@ -1,5 +1,5 @@
 //
-//  Collection+filterM.swift
+//  Collection+FilterM.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -16,6 +16,8 @@ public typealias Maybe<A> = A?
 public typealias Either<L: Error, R> = Result<R, L>
 
 // typealias React<T> = Publisher<T, Error>
+
+// MARK: - FilterM
 
 public extension Collection {
 	
@@ -82,6 +84,8 @@ public extension Collection {
 		})
 	}
 }
+
+// MARK: - Return
 
 fileprivate func `return`<T>(_ t: T) -> List<T> {
 	return [t]

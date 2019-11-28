@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B3A46FE6238F5ED8004B7647 /* CollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A46FDC238F5ED7004B7647 /* CollectionKit.framework */; };
-		B3A46FEB238F5ED8004B7647 /* CollectionKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FEA238F5ED8004B7647 /* CollectionKitTests.swift */; };
+		B3A46FEB238F5ED8004B7647 /* Collection+FilterMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FEA238F5ED8004B7647 /* Collection+FilterMTests.swift */; };
 		B3A46FED238F5ED8004B7647 /* CollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B3A46FDF238F5ED7004B7647 /* CollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3A46FF7238F5F14004B7647 /* Collection+filterM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FF6238F5F14004B7647 /* Collection+filterM.swift */; };
+		B3A46FF7238F5F14004B7647 /* Collection+FilterM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FF6238F5F14004B7647 /* Collection+FilterM.swift */; };
+		B3A46FF9238F7163004B7647 /* Dictionary+FlatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FF8238F7163004B7647 /* Dictionary+FlatMap.swift */; };
+		B3A46FFB238F7E6A004B7647 /* Dictionary+FlatMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FFA238F7E6A004B7647 /* Dictionary+FlatMapTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,9 +30,11 @@
 		B3A46FDF238F5ED7004B7647 /* CollectionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionKit.h; sourceTree = "<group>"; };
 		B3A46FE0238F5ED7004B7647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3A46FE5238F5ED8004B7647 /* CollectionKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3A46FEA238F5ED8004B7647 /* CollectionKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionKitTests.swift; sourceTree = "<group>"; };
+		B3A46FEA238F5ED8004B7647 /* Collection+FilterMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+FilterMTests.swift"; sourceTree = "<group>"; };
 		B3A46FEC238F5ED8004B7647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3A46FF6238F5F14004B7647 /* Collection+filterM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+filterM.swift"; sourceTree = "<group>"; };
+		B3A46FF6238F5F14004B7647 /* Collection+FilterM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+FilterM.swift"; sourceTree = "<group>"; };
+		B3A46FF8238F7163004B7647 /* Dictionary+FlatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+FlatMap.swift"; sourceTree = "<group>"; };
+		B3A46FFA238F7E6A004B7647 /* Dictionary+FlatMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+FlatMapTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,8 @@
 			children = (
 				B3A46FDF238F5ED7004B7647 /* CollectionKit.h */,
 				B3A46FE0238F5ED7004B7647 /* Info.plist */,
-				B3A46FF6238F5F14004B7647 /* Collection+filterM.swift */,
+				B3A46FF6238F5F14004B7647 /* Collection+FilterM.swift */,
+				B3A46FF8238F7163004B7647 /* Dictionary+FlatMap.swift */,
 			);
 			path = CollectionKit;
 			sourceTree = "<group>";
@@ -83,7 +88,8 @@
 		B3A46FE9238F5ED8004B7647 /* CollectionKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				B3A46FEA238F5ED8004B7647 /* CollectionKitTests.swift */,
+				B3A46FEA238F5ED8004B7647 /* Collection+FilterMTests.swift */,
+				B3A46FFA238F7E6A004B7647 /* Dictionary+FlatMapTests.swift */,
 				B3A46FEC238F5ED8004B7647 /* Info.plist */,
 			);
 			path = CollectionKitTests;
@@ -199,7 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A46FF7238F5F14004B7647 /* Collection+filterM.swift in Sources */,
+				B3A46FF7238F5F14004B7647 /* Collection+FilterM.swift in Sources */,
+				B3A46FF9238F7163004B7647 /* Dictionary+FlatMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A46FEB238F5ED8004B7647 /* CollectionKitTests.swift in Sources */,
+				B3A46FEB238F5ED8004B7647 /* Collection+FilterMTests.swift in Sources */,
+				B3A46FFB238F7E6A004B7647 /* Dictionary+FlatMapTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

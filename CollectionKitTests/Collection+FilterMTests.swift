@@ -1,5 +1,5 @@
 //
-//  CollectionKitTests.swift
+//  Collection+FilterMTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionKitTests: XCTestCase {
+class CollectionFilterMTests: XCTestCase {
 
 	private let a = [1, 2, 3, 4, 5]
 	private lazy var b = a.filter(odd)
@@ -32,14 +32,6 @@ class CollectionKitTests: XCTestCase {
 		XCTAssertEqual(a.filterM { e -> SEither<Bool> in .success(self.odd(e)) }, .success(b))
 		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .failure("Error") }, .failure("Error"))
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
 
 extension String: Error {}
