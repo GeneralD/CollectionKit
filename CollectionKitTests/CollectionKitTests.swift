@@ -11,17 +11,26 @@ import XCTest
 
 class CollectionKitTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+	private let a = [1, 2, 3, 4, 5]
+	private lazy var b = a.filter(odd)
+	
+	private func odd(_ n: Int) -> Bool { return n % 2 == 1 }
+	
+	func testFilterMList() {
+		XCTAssertEqual(a.filterM { _ in [true, false] }, [[1, 2, 3, 4, 5], [1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 3], [1, 2, 4, 5], [1, 2, 4], [1, 2, 5], [1, 2], [1, 3, 4, 5], [1, 3, 4], [1, 3, 5], [1, 3], [1, 4, 5], [1, 4], [1, 5], [1], [2, 3, 4, 5], [2, 3, 4], [2, 3, 5], [2, 3], [2, 4, 5], [2, 4], [2, 5], [2], [3, 4, 5], [3, 4], [3, 5], [3], [4, 5], [4], [5], []])
+		XCTAssertEqual(a.filterM { e in [self.odd(e), false] }, [[1, 3, 5], [1, 3], [1, 3, 5], [1, 3], [1, 5], [1], [1, 5], [1], [1, 3, 5], [1, 3], [1, 3, 5], [1, 3], [1, 5], [1], [1, 5], [1], [3, 5], [3], [3, 5], [3], [5], [], [5], [], [3, 5], [3], [3, 5], [3], [5], [], [5], []])
+	}
+	
+	func testFilterMaybe() {
+		XCTAssertEqual(a.filterM { _ -> Maybe<Bool> in true }, .some(a))
+		XCTAssertEqual(a.filterM { e -> Maybe<Bool> in self.odd(e) }, .some(b))
+		XCTAssertEqual(a.filterM { _ -> Maybe<Bool> in .none }, .none)
+	}
+	
+	func testFilterEither() {
+		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .success(true) }, .success(a))
+		XCTAssertEqual(a.filterM { e -> SEither<Bool> in .success(self.odd(e)) }, .success(b))
+		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .failure("Error") }, .failure("Error"))
     }
 
     func testPerformanceExample() {
@@ -32,3 +41,6 @@ class CollectionKitTests: XCTestCase {
     }
 
 }
+
+extension String: Error {}
+fileprivate typealias SEither<T> = Either<String, T>
