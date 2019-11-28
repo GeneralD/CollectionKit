@@ -6,8 +6,6 @@
 //  Copyright © 2019 ZYXW. All rights reserved.
 //
 
-import Foundation
-
 public extension Collection {
 	
 	func combinations(of n: Int) -> [[Element]] {
@@ -24,30 +22,16 @@ public extension Collection {
 	}
 }
 
-public extension Collection where Element: Comparable {
-	
-	private func most(_ f: (Element, Element) -> Element) -> Element? {
-		guard let fst = first else { return nil }
-		return reduce(fst, f)
-	}
-	
-	var max: Element? {
-		return most(max(_:_:))
-	}
-	
-	var min: Element? {
-		return most(min(_:_:))
-	}
-}
+
 
 extension Array {
 	func divided(at k: Int) -> (ArraySlice<Element>, ArraySlice<Element>) {
-		return (self[startIndex..<k], self[k..<endIndex])
+		(self[startIndex..<k], self[k..<endIndex])
 	}
 }
 
 func sub<T: AdditiveArithmetic>(_ t: (T, T)) -> T {
-	return t.1 - t.0
+	t.1 - t.0
 }
 
 //print([1,2,3,4,5].divided(at: 2))

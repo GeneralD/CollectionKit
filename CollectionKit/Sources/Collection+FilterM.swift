@@ -38,8 +38,7 @@ public extension Collection {
 	/// - Throws: Error which is occurred in predicate is going to be rethrown
 	/// - Returns: Result of the filter
 	func filterM(where predicate: @escaping (_ element: Element) throws -> List<Bool>) rethrows -> List<[Element]> {
-		return try reversed().reduce(`return`([]), { r, x in return try predicate(x).flatMap { flg in r.flatMap { ys in `return`(flg ? [x] + ys: ys) }}
-		})
+		try reversed().reduce(`return`([]), { r, x in return try predicate(x).flatMap { flg in r.flatMap { ys in `return`(flg ? [x] + ys: ys) }}})
 	}
 	
 	/// This function is brought from Haskell.
@@ -59,8 +58,7 @@ public extension Collection {
 	/// - Throws: Error which is occurred in predicate is going to be rethrown
 	/// - Returns: Result of the filter
 	func filterM(where predicate: @escaping (_ element: Element) throws -> Maybe<Bool>) rethrows -> Maybe<[Element]> {
-		return try reversed().reduce(`return`([]), { r, x in return try predicate(x).flatMap { flg in r.flatMap { ys in `return`(flg ? [x] + ys: ys) }}
-		})
+		try reversed().reduce(`return`([]), { r, x in return try predicate(x).flatMap { flg in r.flatMap { ys in `return`(flg ? [x] + ys: ys) }}})
 	}
 	
 	/// This function is brought from Haskell.
@@ -80,8 +78,7 @@ public extension Collection {
 	/// - Throws: Error which is occurred in predicate is going to be rethrown
 	/// - Returns: Result of the filter
 	func filterM<E: Error>(where predicate: @escaping (_ element: Element) throws -> Either<E, Bool>) rethrows -> Either<E, [Element]> {
-		return try reversed().reduce(`return`([]), { r, x in return try predicate(x).flatMap { flg in r.flatMap { ys in `return`(flg ? [x] + ys: ys) }}
-		})
+		try reversed().reduce(`return`([]), { r, x in return try predicate(x).flatMap { flg in r.flatMap { ys in `return`(flg ? [x] + ys: ys) }}})
 	}
 }
 
