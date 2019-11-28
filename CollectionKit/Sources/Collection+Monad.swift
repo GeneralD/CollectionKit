@@ -1,5 +1,5 @@
 //
-//  Collection+FilterM.swift
+//  Collection+Monad.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -16,6 +16,20 @@ public typealias Maybe<A> = A?
 public typealias Either<L: Error, R> = Result<R, L>
 
 // typealias React<T> = Publisher<T, Error>
+
+// MARK: - Return
+
+fileprivate func `return`<T>(_ t: T) -> List<T> {
+	return [t]
+}
+
+fileprivate func `return`<T>(_ t: T) -> Maybe<T> {
+	return t
+}
+
+fileprivate func `return`<L: Error, R>(_ t: R) -> Either<L, R> {
+	return .success(t)
+}
 
 // MARK: - FilterM
 
@@ -82,16 +96,19 @@ public extension Collection {
 	}
 }
 
-// MARK: - Return
+// MARK: - MapM
 
-fileprivate func `return`<T>(_ t: T) -> List<T> {
-	return [t]
-}
-
-fileprivate func `return`<T>(_ t: T) -> Maybe<T> {
-	return t
-}
-
-fileprivate func `return`<L: Error, R>(_ t: R) -> Either<L, R> {
-	return .success(t)
+public extension Collection {
+	
+	func mapM(_ transform: @escaping (_ element: Element) throws -> List<Element>) rethrows -> List<[Element]> {
+		try reversed().reduce(`return`([]), { r, x in return try transform(x).flatMap { y in r.flatMap { ys in `return`([y] + ys) }}})
+	}
+	
+	func mapM(_ transform: @escaping (_ element: Element) throws -> Maybe<Element>) rethrows -> Maybe<[Element]> {
+		try reversed().reduce(`return`([]), { r, x in return try transform(x).flatMap { y in r.flatMap { ys in `return`([y] + ys) }}})
+	}
+	
+	func mapM<E: Error>(_ transform: @escaping (_ element: Element) throws -> Either<E, Element>) rethrows -> Either<E, [Element]> {
+		try reversed().reduce(`return`([]), { r, x in return try transform(x).flatMap { y in r.flatMap { ys in `return`([y] + ys) }}})
+	}
 }

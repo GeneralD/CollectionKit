@@ -1,5 +1,5 @@
 //
-//  Collection+FilterMTests.swift
+//  Collection+MonadTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionFilterMTests: XCTestCase {
+class CollectionMonadTests: XCTestCase {
 
 	private let a = [1, 2, 3, 4, 5]
 	private lazy var b = a.filter(odd)
@@ -32,6 +32,21 @@ class CollectionFilterMTests: XCTestCase {
 		XCTAssertEqual(a.filterM { e -> SEither<Bool> in .success(self.odd(e)) }, .success(b))
 		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .failure("Error") }, .failure("Error"))
     }
+	
+	func testMapMList() {
+		XCTAssertEqual(a.mapM { x in [x] }, [[1, 2, 3, 4, 5]])
+		XCTAssertEqual(a.mapM { x in [x, x + 1] }, [[1, 2, 3, 4, 5], [1, 2, 3, 4, 6], [1, 2, 3, 5, 5], [1, 2, 3, 5, 6], [1, 2, 4, 4, 5], [1, 2, 4, 4, 6], [1, 2, 4, 5, 5], [1, 2, 4, 5, 6], [1, 3, 3, 4, 5], [1, 3, 3, 4, 6], [1, 3, 3, 5, 5], [1, 3, 3, 5, 6], [1, 3, 4, 4, 5], [1, 3, 4, 4, 6], [1, 3, 4, 5, 5], [1, 3, 4, 5, 6], [2, 2, 3, 4, 5], [2, 2, 3, 4, 6], [2, 2, 3, 5, 5], [2, 2, 3, 5, 6], [2, 2, 4, 4, 5], [2, 2, 4, 4, 6], [2, 2, 4, 5, 5], [2, 2, 4, 5, 6], [2, 3, 3, 4, 5], [2, 3, 3, 4, 6], [2, 3, 3, 5, 5], [2, 3, 3, 5, 6], [2, 3, 4, 4, 5], [2, 3, 4, 4, 6], [2, 3, 4, 5, 5], [2, 3, 4, 5, 6]])
+	}
+	
+	func testMapMMaybe() {
+		XCTAssertEqual(a.mapM { x -> Maybe<Int> in x + 1 }, [2, 3, 4, 5, 6])
+		XCTAssertEqual(a.mapM { x -> Maybe<Int> in nil }, nil)
+	}
+	
+	func testMapMEither() {
+		XCTAssertEqual(a.mapM { x -> SEither<Int> in .success(x + 1) }, .success([2, 3, 4, 5, 6]))
+		XCTAssertEqual(a.mapM { x -> SEither<Int> in .failure("Failure") }, .failure("Failure"))
+	}
 }
 
 extension String: Error {}
