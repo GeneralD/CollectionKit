@@ -36,6 +36,8 @@ public extension Collection {
 	}
 }
 
+// MARK: - Biggest and Smallest
+
 public extension Collection where Element: Comparable {
 	
 	/// Get the biggest element in the collection.
@@ -47,6 +49,9 @@ public extension Collection where Element: Comparable {
 	var min: Element? {
 		most(min(_:_:))
 	}
+}
+	
+public extension Collection {
 	
 	/// Get the biggest one about thing related to the element in the collection.
 	///
