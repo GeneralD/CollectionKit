@@ -36,6 +36,7 @@ fileprivate func `return`<L: Error, R>(_ t: R) -> Either<L, R> {
 public extension Collection {
 	
 	/// This function is brought from Haskell.
+	///
 	/// Original source is below:
 	/// ```
 	/// filterM :: (Monad m) => (a -> m Bool) -> [a] -> m [a]
@@ -56,6 +57,7 @@ public extension Collection {
 	}
 	
 	/// This function is brought from Haskell.
+	///
 	/// Original source is below:
 	/// ```
 	/// filterM :: (Monad m) => (a -> m Bool) -> [a] -> m [a]
@@ -76,6 +78,7 @@ public extension Collection {
 	}
 	
 	/// This function is brought from Haskell.
+	///
 	/// Original source is below:
 	/// ```
 	/// filterM :: (Monad m) => (a -> m Bool) -> [a] -> m [a]
@@ -100,14 +103,71 @@ public extension Collection {
 
 public extension Collection {
 	
+	/// This function is brought from Haskell.
+	///
+	/// Haskell explains about *MapM*:
+	///
+	/// *Map each element of a structure to a monadic action, evaluate these actions from left to right, and collect the results.*
+	///
+	/// Original source is below:
+	/// ```
+	/// mapM :: Monad m => (a -> m b) -> t a -> m (t b)
+	/// mapM = traverse
+	///
+    /// traverse f = List.foldr cons_f (pure [])
+    ///   where cons_f x ys = liftA2 (:) (f x) ys
+	/// ```
+	/// - Parameters:
+	/// 	- transform: transform
+	/// 	- element: Iterated item
+	/// - Throws: Error which is occurred in predicate is going to be rethrown
+	/// - Returns: Result of the map
 	func mapM(_ transform: @escaping (_ element: Element) throws -> List<Element>) rethrows -> List<[Element]> {
 		try reversed().reduce(`return`([]), { r, x in return try transform(x).flatMap { y in r.flatMap { ys in `return`([y] + ys) }}})
 	}
 	
+	/// This function is brought from Haskell.
+	///
+	/// Haskell explains about *MapM*:
+	///
+	/// *Map each element of a structure to a monadic action, evaluate these actions from left to right, and collect the results.*
+	///
+	/// Original source is below:
+	/// ```
+	/// mapM :: Monad m => (a -> m b) -> t a -> m (t b)
+	/// mapM = traverse
+	///
+    /// traverse f = List.foldr cons_f (pure [])
+    ///   where cons_f x ys = liftA2 (:) (f x) ys
+	/// ```
+	/// - Parameters:
+	/// 	- transform: transform
+	/// 	- element: Iterated item
+	/// - Throws: Error which is occurred in predicate is going to be rethrown
+	/// - Returns: Result of the map
 	func mapM(_ transform: @escaping (_ element: Element) throws -> Maybe<Element>) rethrows -> Maybe<[Element]> {
 		try reversed().reduce(`return`([]), { r, x in return try transform(x).flatMap { y in r.flatMap { ys in `return`([y] + ys) }}})
 	}
 	
+	/// This function is brought from Haskell.
+	///
+	/// Haskell explains about *MapM*:
+	///
+	/// *Map each element of a structure to a monadic action, evaluate these actions from left to right, and collect the results.*
+	///
+	/// Original source is below:
+	/// ```
+	/// mapM :: Monad m => (a -> m b) -> t a -> m (t b)
+	/// mapM = traverse
+	///
+    /// traverse f = List.foldr cons_f (pure [])
+    ///   where cons_f x ys = liftA2 (:) (f x) ys
+	/// ```
+	/// - Parameters:
+	/// 	- transform: transform
+	/// 	- element: Iterated item
+	/// - Throws: Error which is occurred in predicate is going to be rethrown
+	/// - Returns: Result of the map
 	func mapM<E: Error>(_ transform: @escaping (_ element: Element) throws -> Either<E, Element>) rethrows -> Either<E, [Element]> {
 		try reversed().reduce(`return`([]), { r, x in return try transform(x).flatMap { y in r.flatMap { ys in `return`([y] + ys) }}})
 	}

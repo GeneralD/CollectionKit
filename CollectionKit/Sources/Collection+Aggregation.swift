@@ -38,10 +38,12 @@ public extension Collection {
 
 public extension Collection where Element: Comparable {
 	
+	/// Get the biggest element in the collection.
 	var max: Element? {
 		most(max(_:_:))
 	}
 	
+	/// Get the smallest element in the collection.
 	var min: Element? {
 		most(min(_:_:))
 	}
