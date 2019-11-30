@@ -13,6 +13,8 @@
 		B36DF0C0238FA28B006ACEBC /* Collection+PartialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0BF238FA28B006ACEBC /* Collection+PartialTests.swift */; };
 		B36DF0C2238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0C1238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift */; };
 		B36DF0C4238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0C3238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift */; };
+		B36DF0C823921270006ACEBC /* Zip2Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0C723921270006ACEBC /* Zip2Sequence+Extension.swift */; };
+		B36DF0CA23922261006ACEBC /* Zip2Sequence+ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0C923922261006ACEBC /* Zip2Sequence+ExtensionTests.swift */; };
 		B3A46FE6238F5ED8004B7647 /* CollectionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A46FDC238F5ED7004B7647 /* CollectionKit.framework */; };
 		B3A46FEB238F5ED8004B7647 /* Collection+MonadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A46FEA238F5ED8004B7647 /* Collection+MonadTests.swift */; };
 		B3A46FED238F5ED8004B7647 /* CollectionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B3A46FDF238F5ED7004B7647 /* CollectionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +42,8 @@
 		B36DF0BF238FA28B006ACEBC /* Collection+PartialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+PartialTests.swift"; sourceTree = "<group>"; };
 		B36DF0C1238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeRandomAccess.swift"; sourceTree = "<group>"; };
 		B36DF0C3238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeRandomAccessTests.swift"; sourceTree = "<group>"; };
+		B36DF0C723921270006ACEBC /* Zip2Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Zip2Sequence+Extension.swift"; sourceTree = "<group>"; };
+		B36DF0C923922261006ACEBC /* Zip2Sequence+ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Zip2Sequence+ExtensionTests.swift"; sourceTree = "<group>"; };
 		B3A46FDC238F5ED7004B7647 /* CollectionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3A46FDF238F5ED7004B7647 /* CollectionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionKit.h; sourceTree = "<group>"; };
 		B3A46FE0238F5ED7004B7647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				B36DF0BF238FA28B006ACEBC /* Collection+PartialTests.swift */,
 				B36DF0C3238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift */,
 				B3A46FFA238F7E6A004B7647 /* Dictionary+FlatMapTests.swift */,
+				B36DF0C923922261006ACEBC /* Zip2Sequence+ExtensionTests.swift */,
 				B3A46FEC238F5ED8004B7647 /* Info.plist */,
 			);
 			path = CollectionKitTests;
@@ -123,6 +128,7 @@
 				B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */,
 				B36DF0C1238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift */,
 				B3A46FF8238F7163004B7647 /* Dictionary+FlatMap.swift */,
+				B36DF0C723921270006ACEBC /* Zip2Sequence+Extension.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				B3A46FF9238F7163004B7647 /* Dictionary+FlatMap.swift in Sources */,
 				B36DF0BA238F8F60006ACEBC /* Collection+Aggregation.swift in Sources */,
 				B36DF0BE238F9F9E006ACEBC /* Collection+Partial.swift in Sources */,
+				B36DF0C823921270006ACEBC /* Zip2Sequence+Extension.swift in Sources */,
 				B3A46FFD238F8429004B7647 /* Collection+Combination.swift in Sources */,
 				B36DF0C2238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift in Sources */,
 			);
@@ -253,6 +260,7 @@
 				B3A46FEB238F5ED8004B7647 /* Collection+MonadTests.swift in Sources */,
 				B36DF0C0238FA28B006ACEBC /* Collection+PartialTests.swift in Sources */,
 				B3A46FFB238F7E6A004B7647 /* Dictionary+FlatMapTests.swift in Sources */,
+				B36DF0CA23922261006ACEBC /* Zip2Sequence+ExtensionTests.swift in Sources */,
 				B36DF0C4238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift in Sources */,
 				B36DF0BC238F9464006ACEBC /* Collection+AggregationTests.swift in Sources */,
 				B3A47000238F8682004B7647 /* Collection+CombinationTests.swift in Sources */,
