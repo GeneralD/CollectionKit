@@ -25,25 +25,56 @@ public extension Collection {
 	
 	/// Find the best of what you need.
 	/// - Parameters:
-	/// 	- more: Returns `true` to choose `lhs`, otherwise `rhs`
+	/// 	- more: Returns `true` to choose `rhs`, otherwise `lhs`
 	/// 	- lhs: Compared an element
 	/// 	- rhs: Another element
 	/// - Throws: Error which is occurred in predicate is going to be rethrown
 	/// - Returns: Best one
 	/// - Complexity: O(n), where n is the length of the sequence.
 	func most(_ more: (_ lhs: Element, _ rhs: Element) throws -> Bool) rethrows -> Element? {
-		try most { try more($0, $1) ? $0 : $1 }
+		try most { try more($0, $1) ? $1 : $0 }
 	}
 }
 
+// MARK: - Biggest and Smallest
+
 public extension Collection where Element: Comparable {
 	
+	/// Get the biggest element in the collection.
 	var max: Element? {
 		most(max(_:_:))
 	}
 	
+	/// Get the smallest element in the collection.
 	var min: Element? {
 		most(min(_:_:))
+	}
+}
+	
+public extension Collection {
+	
+	/// Get the biggest one about thing related to the element in the collection.
+	///
+	/// Discussion
+	/// - Parameters:
+	/// 	- what: Return what the biggest is about.
+	///     - element: Iterated element
+	/// - Throws: Error which is occurred in predicate is going to be rethrown
+	/// - Returns: Biggest one about that.
+	func max<C: Comparable>(by what: (_ element: Element) throws -> C) rethrows -> Element? {
+		try most { try what($0) < what($1) }
+	}
+	
+	/// Get the smallest one about thing related to the element in the collection.
+	///
+	/// Discussion
+	/// - Parameters:
+	/// 	- what: Return what the smallest is about.
+	///     - element: Iterated element
+	/// - Throws: Error which is occurred in predicate is going to be rethrown
+	/// - Returns: Smallest one about that.
+	func min<C: Comparable>(by what: (_ element: Element) throws -> C) rethrows -> Element? {
+		try most { try what($0) > what($1) }
 	}
 }
 
