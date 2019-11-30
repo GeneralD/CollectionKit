@@ -16,14 +16,26 @@ class CollectionAggregationTests: XCTestCase {
 	
     func testMax() {
 		XCTAssertEqual(a.max, 81)
-		XCTAssertEqual(a.most(>), a.most(max(_:_:)))
-		XCTAssertEqual(c.most(>=), c.most(max(_:_:)))
+		XCTAssertEqual(a.most(<), a.most(max(_:_:)))
+		XCTAssertEqual(c.most(<=), c.most(max(_:_:)))
     }
 
+	func testMaxBy() {
+		XCTAssertEqual(a.max { $0 }, 81)
+		// Compare with Swift's
+		XCTAssertEqual(a.max { $0 }, a.max { $0 < $1 })
+    }
+	
 	func testMin() {
         XCTAssertEqual(a.min, -69)
-		XCTAssertEqual(a.most(<), a.most(min(_:_:)))
-		XCTAssertEqual(c.most(<=), c.most(min(_:_:)))
+		XCTAssertEqual(a.most(>), a.most(min(_:_:)))
+		XCTAssertEqual(c.most(>=), c.most(min(_:_:)))
+    }
+	
+	func testMinBy() {
+		XCTAssertEqual(a.min { $0 }, -69)
+		// Compare with Swift's
+		XCTAssertEqual(a.min { $0 }, a.min { $0 < $1 })
     }
 	
 	func testAll() {
