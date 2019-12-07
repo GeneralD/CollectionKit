@@ -77,30 +77,3 @@ public extension Collection {
 		try most { try what($0) > what($1) }
 	}
 }
-
-// MARK: - Check Condition
-
-public extension Collection {
-	
-	/// Check if every element passes the condition
-	/// - Parameters:
-	/// 	- condition: If the element passes the condition
-	/// 	- element: Iterated element
-	/// - Throws: Error which is occurred in predicate is going to be rethrown
-	/// - Returns: If every element passes the condition
-	/// - Complexity: Maximum O(n), where n is the length of the sequence.
-	func all(_ condition: (_ element: Element) throws -> Bool) rethrows -> Bool {
-		try first { try !condition($0) } == nil
-	}
-	
-	/// Check if any element passes the condition
-	/// - Parameters:
-	/// 	- condition: If the element passes the condition
-	/// 	- element: Iterated element
-	/// - Throws: Error which is occurred in predicate is going to be rethrown
-	/// - Returns: If any element passes the condition
-	/// - Complexity: Maximum O(n), where n is the length of the sequence.
-	func any(_ condition: (Element) throws -> Bool) rethrows -> Bool {
-		try first { try condition($0) } != nil
-	}
-}

@@ -37,14 +37,4 @@ class CollectionAggregationTests: XCTestCase {
 		// Compare with Swift's
 		XCTAssertEqual(a.min { $0 }, a.min { $0 < $1 })
 	}
-	
-	func testAll() {
-		XCTAssertFalse(a.all { $0 < 0 })
-		XCTAssertTrue(a.all { $0 < 100 })
-	}
-	
-	func testAny() {
-		XCTAssertTrue(a.any { $0 > 0 })
-		XCTAssertFalse(a.any { $0 > 100 })
-	}
 }
