@@ -10,7 +10,7 @@ import XCTest
 @testable import CollectionKit
 
 class CollectionMonadTests: XCTestCase {
-
+	
 	private let a = [1, 2, 3, 4, 5]
 	private lazy var b = a.filter(odd)
 	
@@ -31,7 +31,7 @@ class CollectionMonadTests: XCTestCase {
 		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .success(true) }, .success(a))
 		XCTAssertEqual(a.filterM { e -> SEither<Bool> in .success(self.odd(e)) }, .success(b))
 		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .failure("Error") }, .failure("Error"))
-    }
+	}
 	
 	func testMapMList() {
 		XCTAssertEqual(a.mapM { x in [x] }, [[1, 2, 3, 4, 5]])

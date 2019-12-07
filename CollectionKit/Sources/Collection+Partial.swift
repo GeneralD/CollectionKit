@@ -46,7 +46,7 @@ public extension Collection {
 		let ys = xs.dropFirst()
 		return (x, y, ys)
 	}
-
+	
 	/// The 3 head element and the tail elements in a tuple.
 	///
 	/// This is useful to implement something in Haskell-like way. (It's like pattern matching for the *list*.)

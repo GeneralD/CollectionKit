@@ -114,8 +114,8 @@ public extension Collection {
 	/// mapM :: Monad m => (a -> m b) -> t a -> m (t b)
 	/// mapM = traverse
 	///
-    /// traverse f = List.foldr cons_f (pure [])
-    ///   where cons_f x ys = liftA2 (:) (f x) ys
+	/// traverse f = List.foldr cons_f (pure [])
+	///   where cons_f x ys = liftA2 (:) (f x) ys
 	/// ```
 	/// - Parameters:
 	/// 	- transform: transform
@@ -137,8 +137,8 @@ public extension Collection {
 	/// mapM :: Monad m => (a -> m b) -> t a -> m (t b)
 	/// mapM = traverse
 	///
-    /// traverse f = List.foldr cons_f (pure [])
-    ///   where cons_f x ys = liftA2 (:) (f x) ys
+	/// traverse f = List.foldr cons_f (pure [])
+	///   where cons_f x ys = liftA2 (:) (f x) ys
 	/// ```
 	/// - Parameters:
 	/// 	- transform: transform
@@ -160,8 +160,8 @@ public extension Collection {
 	/// mapM :: Monad m => (a -> m b) -> t a -> m (t b)
 	/// mapM = traverse
 	///
-    /// traverse f = List.foldr cons_f (pure [])
-    ///   where cons_f x ys = liftA2 (:) (f x) ys
+	/// traverse f = List.foldr cons_f (pure [])
+	///   where cons_f x ys = liftA2 (:) (f x) ys
 	/// ```
 	/// - Parameters:
 	/// 	- transform: transform

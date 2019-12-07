@@ -50,7 +50,7 @@ public extension Collection where Element: Comparable {
 		most(min(_:_:))
 	}
 }
-	
+
 public extension Collection {
 	
 	/// Get the biggest one about thing related to the element in the collection.
