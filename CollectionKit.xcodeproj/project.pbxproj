@@ -27,6 +27,10 @@
 		B3BD67D5239BBAEE0067E45B /* Collection+Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD67D4239BBAEE0067E45B /* Collection+Condition.swift */; };
 		B3BD67D7239BBB7E0067E45B /* Collection+AccumlateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD67D6239BBB7E0067E45B /* Collection+AccumlateTest.swift */; };
 		B3BD67D9239BBBBB0067E45B /* Collection+ConditionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BD67D8239BBBBB0067E45B /* Collection+ConditionTest.swift */; };
+		B3F1CE19239CA262005B8EE2 /* Collection+Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1CE18239CA262005B8EE2 /* Collection+Buffer.swift */; };
+		B3F1CE1B239CA2BE005B8EE2 /* Collection+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1CE1A239CA2BE005B8EE2 /* Collection+Common.swift */; };
+		B3F1CE1D239CA3A0005B8EE2 /* Collection+BufferTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1CE1C239CA3A0005B8EE2 /* Collection+BufferTest.swift */; };
+		B3F1CE1F239CA3D9005B8EE2 /* Collection+CommonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1CE1E239CA3D9005B8EE2 /* Collection+CommonTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		B3BD67D4239BBAEE0067E45B /* Collection+Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Condition.swift"; sourceTree = "<group>"; };
 		B3BD67D6239BBB7E0067E45B /* Collection+AccumlateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+AccumlateTest.swift"; sourceTree = "<group>"; };
 		B3BD67D8239BBBBB0067E45B /* Collection+ConditionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+ConditionTest.swift"; sourceTree = "<group>"; };
+		B3F1CE18239CA262005B8EE2 /* Collection+Buffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Buffer.swift"; sourceTree = "<group>"; };
+		B3F1CE1A239CA2BE005B8EE2 /* Collection+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Common.swift"; sourceTree = "<group>"; };
+		B3F1CE1C239CA3A0005B8EE2 /* Collection+BufferTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+BufferTest.swift"; sourceTree = "<group>"; };
+		B3F1CE1E239CA3D9005B8EE2 /* Collection+CommonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+CommonTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +125,9 @@
 			children = (
 				B36DF0BB238F9464006ACEBC /* Collection+AggregationTests.swift */,
 				B3BD67D6239BBB7E0067E45B /* Collection+AccumlateTest.swift */,
+				B3F1CE1C239CA3A0005B8EE2 /* Collection+BufferTest.swift */,
 				B3A46FFF238F8682004B7647 /* Collection+CombinationTests.swift */,
+				B3F1CE1E239CA3D9005B8EE2 /* Collection+CommonTest.swift */,
 				B3BD67D8239BBBBB0067E45B /* Collection+ConditionTest.swift */,
 				B3A46FEA238F5ED8004B7647 /* Collection+MonadTests.swift */,
 				B36DF0BF238FA28B006ACEBC /* Collection+PartialTests.swift */,
@@ -134,7 +144,9 @@
 			children = (
 				B36DF0B9238F8F60006ACEBC /* Collection+Aggregation.swift */,
 				B3BD67D2239BB9D80067E45B /* Collection+Accumlate.swift */,
+				B3F1CE18239CA262005B8EE2 /* Collection+Buffer.swift */,
 				B3A46FFC238F8429004B7647 /* Collection+Combination.swift */,
+				B3F1CE1A239CA2BE005B8EE2 /* Collection+Common.swift */,
 				B3BD67D4239BBAEE0067E45B /* Collection+Condition.swift */,
 				B3A46FF6238F5F14004B7647 /* Collection+Monad.swift */,
 				B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */,
@@ -256,9 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A46FF7238F5F14004B7647 /* Collection+Monad.swift in Sources */,
+				B3F1CE19239CA262005B8EE2 /* Collection+Buffer.swift in Sources */,
 				B3A46FF9238F7163004B7647 /* Dictionary+FlatMap.swift in Sources */,
 				B36DF0BA238F8F60006ACEBC /* Collection+Aggregation.swift in Sources */,
 				B3BD67D3239BB9D80067E45B /* Collection+Accumlate.swift in Sources */,
+				B3F1CE1B239CA2BE005B8EE2 /* Collection+Common.swift in Sources */,
 				B36DF0BE238F9F9E006ACEBC /* Collection+Partial.swift in Sources */,
 				B3BD67D5239BBAEE0067E45B /* Collection+Condition.swift in Sources */,
 				B36DF0C823921270006ACEBC /* Zip2Sequence+Extension.swift in Sources */,
@@ -276,8 +290,10 @@
 				B3A46FFB238F7E6A004B7647 /* Dictionary+FlatMapTests.swift in Sources */,
 				B3BD67D9239BBBBB0067E45B /* Collection+ConditionTest.swift in Sources */,
 				B36DF0CA23922261006ACEBC /* Zip2Sequence+ExtensionTests.swift in Sources */,
+				B3F1CE1D239CA3A0005B8EE2 /* Collection+BufferTest.swift in Sources */,
 				B36DF0C4238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift in Sources */,
 				B36DF0BC238F9464006ACEBC /* Collection+AggregationTests.swift in Sources */,
+				B3F1CE1F239CA3D9005B8EE2 /* Collection+CommonTest.swift in Sources */,
 				B3A47000238F8682004B7647 /* Collection+CombinationTests.swift in Sources */,
 				B3BD67D7239BBB7E0067E45B /* Collection+AccumlateTest.swift in Sources */,
 			);

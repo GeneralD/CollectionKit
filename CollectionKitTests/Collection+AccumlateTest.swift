@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import CollectionKit
 
 class CollectionAccumlateTest: XCTestCase {
 	
@@ -18,6 +19,6 @@ class CollectionAccumlateTest: XCTestCase {
 	
 	func testReduce3() {
 		let mult: (Int, Int) -> Int = (*) // To avoid: `The compiler is unable to type-check this expression in reasonable`
-		XCTAssertEqual((1...4).reduce(1, mult, 100, mult, 10000, mult, { $0 + $1 + $2 }), 242424)
+		XCTAssertEqual((1...4).reduce(1, mult, 100, mult, 10000, mult) { $0 + $1 + $2 }, 242424)
 	}
 }
