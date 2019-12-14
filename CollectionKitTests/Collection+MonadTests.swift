@@ -33,6 +33,12 @@ class CollectionMonadTests: XCTestCase {
 		XCTAssertEqual(a.filterM { _ -> SEither<Bool> in .failure("Error") }, .failure("Error"))
 	}
 	
+	func testFilterReader() {
+		XCTAssertEqual(a.filterM { _ -> ((Int) -> Bool) in { _ in true } } (0), a)
+		XCTAssertEqual(a.filterM { e -> ((Int) -> Bool) in { _ in self.odd(e) } } (0), b)
+		XCTAssertEqual(a.filterM { e -> ((Int) -> Bool) in { n in e > n } } (2), [3, 4, 5])
+	}
+	
 	func testMapMList() {
 		XCTAssertEqual(a.mapM { x in [x] }, [[1, 2, 3, 4, 5]])
 		XCTAssertEqual(a.mapM { x in [x, x + 1] }, [[1, 2, 3, 4, 5], [1, 2, 3, 4, 6], [1, 2, 3, 5, 5], [1, 2, 3, 5, 6], [1, 2, 4, 4, 5], [1, 2, 4, 4, 6], [1, 2, 4, 5, 5], [1, 2, 4, 5, 6], [1, 3, 3, 4, 5], [1, 3, 3, 4, 6], [1, 3, 3, 5, 5], [1, 3, 3, 5, 6], [1, 3, 4, 4, 5], [1, 3, 4, 4, 6], [1, 3, 4, 5, 5], [1, 3, 4, 5, 6], [2, 2, 3, 4, 5], [2, 2, 3, 4, 6], [2, 2, 3, 5, 5], [2, 2, 3, 5, 6], [2, 2, 4, 4, 5], [2, 2, 4, 4, 6], [2, 2, 4, 5, 5], [2, 2, 4, 5, 6], [2, 3, 3, 4, 5], [2, 3, 3, 4, 6], [2, 3, 3, 5, 5], [2, 3, 3, 5, 6], [2, 3, 4, 4, 5], [2, 3, 4, 4, 6], [2, 3, 4, 5, 5], [2, 3, 4, 5, 6]])
@@ -46,6 +52,10 @@ class CollectionMonadTests: XCTestCase {
 	func testMapMEither() {
 		XCTAssertEqual(a.mapM { x -> SEither<Int> in .success(x + 1) }, .success([2, 3, 4, 5, 6]))
 		XCTAssertEqual(a.mapM { x -> SEither<Int> in .failure("Failure") }, .failure("Failure"))
+	}
+	
+	func testMapMReader() {
+		// TODO
 	}
 }
 
