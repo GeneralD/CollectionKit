@@ -11,18 +11,11 @@ import XCTest
 
 class CollectionCommonTest: XCTestCase {
 	
-	// TODO: TEST
 	func testArray() {
-		
+		XCTAssertEqual((1...3).array, [1, 2, 3])
 	}
 	
-	// TODO: TEST
-	func testFilterType() {
-		
-	}
-	
-	// TODO: TEST
 	func testFlatten() {
-		
+		XCTAssertEqual([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]].flatten, (1...10).array)
 	}
 }
