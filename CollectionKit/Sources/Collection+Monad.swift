@@ -15,8 +15,6 @@ public typealias Maybe<A> = A?
 /// Haskell calls Result Either
 public typealias Either<L: Error, R> = Result<R, L>
 
-// typealias React<T> = Publisher<T, Error>
-
 // MARK: - Return
 
 fileprivate func `return`<T>(_ t: T) -> List<T> {

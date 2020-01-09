@@ -13,6 +13,8 @@ class CollectionBufferTest: XCTestCase {
 
 	// TODO: TEST
 	func testBuffer() {
-		
+		XCTAssertEqual((1...10).buffer(count: 3), [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]])
+		XCTAssertEqual((1...10).buffer(count: 3, skip: 2), [[1, 2, 3], [3, 4, 5], [5, 6, 7], [7, 8, 9], [9, 10]])
+		XCTAssertEqual((1...10).buffer(count: 2, skip: 3), [[1, 2], [4, 5], [7, 8], [10]])
 	}
 }
