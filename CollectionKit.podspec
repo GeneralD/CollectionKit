@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.license       = { :type => 'BSD' }
   spec.homepage      = 'https://github.com/GeneralD/CollectionKit'
   spec.authors       = { 'Yumenosuke Kokata' => 'yumejustice@gmail.com' }
-  spec.summary       = 'Various extensions for Collections.'
+  spec.summary       = 'Collection of Collection Extensions.'
   spec.source        = { :git => 'https://github.com/GeneralD/CollectionKit.git', :tag => 'v1.0.0' }
   spec.module_name   = 'CollectionKit'
   spec.swift_version = '5.1'
