@@ -12,5 +12,5 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target  = '9.0'
   spec.osx.deployment_target  = '10.10'
 
-  spec.source_files       = 'CollectionKit/Sources/*.swift'
+  spec.source_files       = 'CollectionKit/Sources/**/*.swift'
 end
