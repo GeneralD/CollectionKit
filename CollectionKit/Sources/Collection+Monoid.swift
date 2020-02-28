@@ -191,3 +191,21 @@ extension LastMaybe : Monoid {
 		.init(.none)
 	}
 }
+
+// MARK: Dual Monoid
+public struct Dual<T> {
+	public let run: T
+	init(_ value: T) {
+		run = value
+	}
+}
+
+extension Dual: Monoid where T: Monoid {
+	public static func + (lhs: Dual<T>, rhs: Dual<T>) -> Dual<T> {
+		.init(rhs.run + lhs.run)
+	}
+	
+	public static var zero: Dual<T> {
+		.init(.zero)
+	}
+}
