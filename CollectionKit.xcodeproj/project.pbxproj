@@ -151,11 +151,11 @@
 				B3F1CE1A239CA2BE005B8EE2 /* Collection+Common.swift */,
 				B3BD67D4239BBAEE0067E45B /* Collection+Condition.swift */,
 				B3A46FF6238F5F14004B7647 /* Collection+Monad.swift */,
+				B333F0772408EC6A0096D34C /* Collection+Monoid.swift */,
 				B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */,
 				B36DF0C1238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift */,
 				B3A46FF8238F7163004B7647 /* Dictionary+FlatMap.swift */,
 				B36DF0C723921270006ACEBC /* Zip2Sequence+Extension.swift */,
-				B333F0772408EC6A0096D34C /* Collection+Monoid.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";

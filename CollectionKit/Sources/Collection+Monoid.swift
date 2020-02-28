@@ -72,7 +72,7 @@ extension Product: Monoid where T: Numeric {
 	}
 	
 	public static var zero: Product<T> {
-		.init(.zero)
+		.init(1)
 	}
 }
 
