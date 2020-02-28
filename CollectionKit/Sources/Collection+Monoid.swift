@@ -30,7 +30,7 @@ public extension Collection where Element: Monoid {
 	///
 	/// - Complexity: O(*n*), where *n* is the length of the sequence.
 	func reduce(_ nextPartialResult: (Element, Element) -> Element) -> Element {
-		return reduce(.zero, nextPartialResult)
+		reduce(.zero, nextPartialResult)
 	}
 	
 	/// Returns aggregated value.
@@ -38,7 +38,7 @@ public extension Collection where Element: Monoid {
 	/// Same as `reduce(+)`.
 	/// This is named `mappend` in Haskell.
 	var joined: Element {
-		return reduce(+)
+		reduce(+)
 	}
 }
 

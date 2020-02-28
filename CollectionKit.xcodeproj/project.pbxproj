@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B333F0782408EC6A0096D34C /* Collection+Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333F0772408EC6A0096D34C /* Collection+Monoid.swift */; };
+		B333F07A2409394E0096D34C /* Collection+MonoidTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333F0792409394E0096D34C /* Collection+MonoidTest.swift */; };
 		B36DF0BA238F8F60006ACEBC /* Collection+Aggregation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0B9238F8F60006ACEBC /* Collection+Aggregation.swift */; };
 		B36DF0BC238F9464006ACEBC /* Collection+AggregationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0BB238F9464006ACEBC /* Collection+AggregationTests.swift */; };
 		B36DF0BE238F9F9E006ACEBC /* Collection+Partial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		B333F0772408EC6A0096D34C /* Collection+Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Monoid.swift"; sourceTree = "<group>"; };
+		B333F0792409394E0096D34C /* Collection+MonoidTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+MonoidTest.swift"; sourceTree = "<group>"; };
 		B36DF0B9238F8F60006ACEBC /* Collection+Aggregation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Aggregation.swift"; sourceTree = "<group>"; };
 		B36DF0BB238F9464006ACEBC /* Collection+AggregationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+AggregationTests.swift"; sourceTree = "<group>"; };
 		B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Partial.swift"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				B3F1CE1E239CA3D9005B8EE2 /* Collection+CommonTest.swift */,
 				B3BD67D8239BBBBB0067E45B /* Collection+ConditionTest.swift */,
 				B3A46FEA238F5ED8004B7647 /* Collection+MonadTests.swift */,
+				B333F0792409394E0096D34C /* Collection+MonoidTest.swift */,
 				B36DF0BF238FA28B006ACEBC /* Collection+PartialTests.swift */,
 				B36DF0C3238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift */,
 				B3A46FFA238F7E6A004B7647 /* Dictionary+FlatMapTests.swift */,
@@ -296,6 +299,7 @@
 				B36DF0CA23922261006ACEBC /* Zip2Sequence+ExtensionTests.swift in Sources */,
 				B3F1CE1D239CA3A0005B8EE2 /* Collection+BufferTest.swift in Sources */,
 				B36DF0C4238FDFE6006ACEBC /* Collection+SafeRandomAccessTests.swift in Sources */,
+				B333F07A2409394E0096D34C /* Collection+MonoidTest.swift in Sources */,
 				B36DF0BC238F9464006ACEBC /* Collection+AggregationTests.swift in Sources */,
 				B3F1CE1F239CA3D9005B8EE2 /* Collection+CommonTest.swift in Sources */,
 				B3A47000238F8682004B7647 /* Collection+CombinationTests.swift in Sources */,
