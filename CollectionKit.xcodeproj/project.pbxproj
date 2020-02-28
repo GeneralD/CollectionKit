@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B333F0782408EC6A0096D34C /* Collection+Monoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B333F0772408EC6A0096D34C /* Collection+Monoid.swift */; };
 		B36DF0BA238F8F60006ACEBC /* Collection+Aggregation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0B9238F8F60006ACEBC /* Collection+Aggregation.swift */; };
 		B36DF0BC238F9464006ACEBC /* Collection+AggregationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0BB238F9464006ACEBC /* Collection+AggregationTests.swift */; };
 		B36DF0BE238F9F9E006ACEBC /* Collection+Partial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B333F0772408EC6A0096D34C /* Collection+Monoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Monoid.swift"; sourceTree = "<group>"; };
 		B36DF0B9238F8F60006ACEBC /* Collection+Aggregation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Aggregation.swift"; sourceTree = "<group>"; };
 		B36DF0BB238F9464006ACEBC /* Collection+AggregationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+AggregationTests.swift"; sourceTree = "<group>"; };
 		B36DF0BD238F9F9E006ACEBC /* Collection+Partial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Partial.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				B36DF0C1238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift */,
 				B3A46FF8238F7163004B7647 /* Dictionary+FlatMap.swift */,
 				B36DF0C723921270006ACEBC /* Zip2Sequence+Extension.swift */,
+				B333F0772408EC6A0096D34C /* Collection+Monoid.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				B36DF0C823921270006ACEBC /* Zip2Sequence+Extension.swift in Sources */,
 				B3A46FFD238F8429004B7647 /* Collection+Combination.swift in Sources */,
 				B36DF0C2238FAE1B006ACEBC /* Collection+SafeRandomAccess.swift in Sources */,
+				B333F0782408EC6A0096D34C /* Collection+Monoid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
