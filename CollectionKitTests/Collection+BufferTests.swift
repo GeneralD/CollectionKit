@@ -1,5 +1,5 @@
 //
-//  Collection+BufferTest.swift
+//  Collection+BufferTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/12/08.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionBufferTest: XCTestCase {
+class CollectionBufferTests: XCTestCase {
 
 	func testBuffer() {
 		XCTAssertEqual((1...10).buffer(count: 3), [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]])

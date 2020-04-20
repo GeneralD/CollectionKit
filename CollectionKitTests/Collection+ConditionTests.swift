@@ -1,5 +1,5 @@
 //
-//  Collection+ConditionTest.swift
+//  Collection+ConditionTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/12/07.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionConditionTest: XCTestCase {
+class CollectionConditionTests: XCTestCase {
 	
 	private let a = [2, -69, 66, -18, 0, 7, 81]
 	
