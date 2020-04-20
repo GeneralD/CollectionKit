@@ -7,6 +7,7 @@
 //
 
 public extension Collection {
+	
 	/// Make groups from neighboring elements in the array
 	///
 	/// /// Example:

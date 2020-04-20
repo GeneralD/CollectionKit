@@ -20,7 +20,7 @@ public extension Dictionary {
 	/// - Throws: Error which is occurred in predicate is going to be rethrown
 	/// - Returns:
 	/// 	- Flatten Dictionary
-	func flatMap<NewKey: Hashable, NewValue>(uniquingKeysWith merge: ((NewValue, NewValue) -> NewValue)? = nil, _ transform: (_ pair: (key: Key, value: Value)) throws -> [NewKey: NewValue]) rethrows -> [NewKey: NewValue] {
+	func flatMap<NewKey, NewValue>(uniquingKeysWith merge: ((NewValue, NewValue) -> NewValue)? = nil, _ transform: (_ pair: (key: Key, value: Value)) throws -> [NewKey: NewValue]) rethrows -> [NewKey: NewValue] where NewKey: Hashable {
 		return try reduce(into: [:]) { accum, t in
 			accum.merge(try transform(t),  uniquingKeysWith: merge ?? {$1})
 		}

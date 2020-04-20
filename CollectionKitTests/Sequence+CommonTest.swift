@@ -1,5 +1,5 @@
 //
-//  Collection+CommonTest.swift
+//  Sequence+CommonTest.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/12/08.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionCommonTest: XCTestCase {
+class SequenceCommonTest: XCTestCase {
 	
 	func testArray() {
 		XCTAssertEqual((1...3).array, [1, 2, 3])
