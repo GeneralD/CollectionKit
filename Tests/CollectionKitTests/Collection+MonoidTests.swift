@@ -45,6 +45,7 @@ class CollectionMonoidTests: XCTestCase {
 		XCTAssertEqual([].map(`Any`.init).joined.run, false)
 	}
 	
+	#if canImport(Foundation)
 	func testOrdMonoid() {
 		XCTAssertEqual([].joined, ComparisonResult.orderedSame)
 		XCTAssertEqual([.orderedSame, .orderedSame, .orderedAscending].joined, ComparisonResult.orderedAscending)
@@ -57,6 +58,7 @@ class CollectionMonoidTests: XCTestCase {
 		XCTAssertEqual("apple".compare("application"), .orderedAscending)
 		XCTAssertEqual("apple".zip("application").map { String($0).compare(String($1)) }.joined, .orderedAscending)
 	}
+	#endif
 	
 	func testListMonoid() {
 		XCTAssertEqual([[1], [2, 2], [3, 3, 3]].joined, [1, 2, 2, 3, 3, 3])

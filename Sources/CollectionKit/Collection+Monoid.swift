@@ -6,6 +6,10 @@
 //  Copyright © 2020 ZYXW. All rights reserved.
 //
 
+#if canImport(Foundation)
+import Foundation
+#endif
+
 // MARK: Monoid Definition
 
 /// Haskell class, `Monoid`
@@ -116,6 +120,7 @@ extension `Any`: Monoid where T == Bool {
 }
 
 // MARK: Ord Monoid
+#if canImport(Foundation)
 extension ComparisonResult: Monoid {
 	public static func + (lhs: ComparisonResult, rhs: ComparisonResult) -> ComparisonResult {
 		if case .orderedSame = lhs {
@@ -128,6 +133,7 @@ extension ComparisonResult: Monoid {
 		.orderedSame
 	}
 }
+#endif
 
 // MARK: List Monoid
 extension Array : Monoid {

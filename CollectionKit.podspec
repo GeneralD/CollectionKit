@@ -1,5 +1,5 @@
 Pod::Spec.new do |spec|
-  spec.name          = 'CollectionKit'
+  spec.name          = 'CollectionKit-Swift'
   spec.version       = '1.0.0'
   spec.license       = { :type => 'BSD' }
   spec.homepage      = 'https://github.com/GeneralD/CollectionKit'
@@ -12,5 +12,5 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target  = '9.0'
   spec.osx.deployment_target  = '10.10'
 
-  spec.source_files       = 'CollectionKit/Sources/**/*.swift'
+  spec.source_files       = 'Sources/CollectionKit/*.swift'
 end
