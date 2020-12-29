@@ -16,10 +16,9 @@ class CollectionMethodChainingTest: XCTestCase {
 		let age: Int
 		let friends: [Person]
 	}
-
+	
 	private let people: [Person] = [.init(name: "me", age: 32, friends: [.init(name: "Tom", age: 40, friends: [])]), .init(name: "you", age: 28, friends: [.init(name: "Nancy", age: 10, friends: []), .init(name: "Freddie", age: 20, friends: [.init(name: "Bob", age: 50, friends: [])])])]
 	
-
 	func testChaining() {
 		let totalAge = people[].age
 		XCTAssertEqual(totalAge, [32, 28])

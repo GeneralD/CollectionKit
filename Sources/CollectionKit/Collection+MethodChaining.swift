@@ -12,6 +12,12 @@ public extension Collection {
 	}
 }
 
+public extension Collection where Element: Collection {
+	subscript() -> ArrayMemberLookupReference<[Element.Element]> {
+		.init(source: lazy.flatten)
+	}
+}
+
 @dynamicMemberLookup
 public struct ArrayMemberLookupReference<C: Collection> {
 	fileprivate let source: C
@@ -20,11 +26,5 @@ public struct ArrayMemberLookupReference<C: Collection> {
 extension ArrayMemberLookupReference {
 	subscript<Property>(dynamicMember keyPath: KeyPath<C.Element, Property>) -> [Property] {
 		source.map { t in t[keyPath: keyPath] }
-	}
-}
-
-extension ArrayMemberLookupReference where C.Element: Collection {
-	subscript<Property>(dynamicMember keyPath: KeyPath<C.Element.Element, Property>) -> [Property] {
-		source.flatten.map { t in t[keyPath: keyPath] }
 	}
 }
