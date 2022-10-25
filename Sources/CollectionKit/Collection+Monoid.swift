@@ -53,6 +53,7 @@ public struct Sum<T> {
 		run = value
 	}
 }
+
 public struct Product<T> {
 	public let run: T
 	init(_ value: T) {
