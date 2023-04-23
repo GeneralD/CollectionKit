@@ -1,5 +1,5 @@
 //
-//  Collection+Aggregation.swift
+//  Sequence+Aggregation.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -8,7 +8,7 @@
 
 // MARK: - Find Best
 
-public extension Collection {
+public extension Sequence {
 	
 	/// Find the best of what you need.
 	/// - Parameters:
@@ -38,22 +38,22 @@ public extension Collection {
 
 // MARK: - Biggest and Smallest
 
-public extension Collection where Element: Comparable {
+public extension Sequence where Element: Comparable {
 	
-	/// Get the biggest element in the collection.
+	/// Get the biggest element in the sequence.
 	var max: Element? {
 		most(max(_:_:))
 	}
 	
-	/// Get the smallest element in the collection.
+	/// Get the smallest element in the sequence.
 	var min: Element? {
 		most(min(_:_:))
 	}
 }
 
-public extension Collection {
+public extension Sequence {
 	
-	/// Get the biggest one about thing related to the element in the collection.
+	/// Get the biggest one about thing related to the element in the sequence.
 	///
 	/// Discussion
 	/// - Parameters:
@@ -65,7 +65,7 @@ public extension Collection {
 		try most { try what($0) < what($1) }
 	}
 	
-	/// Get the smallest one about thing related to the element in the collection.
+	/// Get the smallest one about thing related to the element in the sequence.
 	///
 	/// Discussion
 	/// - Parameters:

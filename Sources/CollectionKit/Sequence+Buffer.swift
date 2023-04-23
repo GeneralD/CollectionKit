@@ -1,12 +1,12 @@
 //
-//  Collection+Buffer.swift
+//  Sequence+Buffer.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/12/08.
 //  Copyright © 2019 ZYXW. All rights reserved.
 //
 
-public extension Collection {
+public extension Sequence {
 	
 	/// Make groups from neighboring elements in the array
 	///

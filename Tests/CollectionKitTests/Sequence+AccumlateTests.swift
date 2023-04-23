@@ -1,5 +1,5 @@
 //
-//  Collection+AccumlateTests.swift
+//  Sequence+AccumlateTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/12/07.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionAccumlateTests: XCTestCase {
+class SequenceAccumlateTests: XCTestCase {
 	
 	func testReduce2() {
 		XCTAssertEqual((1..<10).reduce(

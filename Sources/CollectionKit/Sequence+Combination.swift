@@ -1,14 +1,14 @@
 //
-//  Collection+Combination.swift
+//  Sequence+Combination.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
 //  Copyright © 2019 ZYXW. All rights reserved.
 //
 
-public extension Collection {
+public extension Sequence {
 	
-	/// Get all combinations of `n` in this collection.
+	/// Get all combinations of `n` in this sequence.
 	///
 	/// Example:
 	/// ```
@@ -24,7 +24,7 @@ public extension Collection {
 		return xs.combinations(of: n - 1).map { [x] + $0 } + xs.combinations(of: n)
 	}
 	
-	/// Get all pairs in this collection.
+	/// Get all pairs in this sequence.
 	///
 	/// Example:
 	/// ```

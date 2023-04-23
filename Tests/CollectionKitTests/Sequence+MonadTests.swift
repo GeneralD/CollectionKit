@@ -1,5 +1,5 @@
 //
-//  Collection+MonadTests.swift
+//  Sequence+MonadTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionMonadTests: XCTestCase {
+class SequenceMonadTests: XCTestCase {
 	
 	private let a = [1, 2, 3, 4, 5]
 	private lazy var b = a.filter(odd)

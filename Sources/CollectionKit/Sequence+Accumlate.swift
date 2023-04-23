@@ -1,12 +1,12 @@
 //
-//  Collection+Accumlate.swift
+//  Sequence+Accumlate.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/12/07.
 //  Copyright © 2019 ZYXW. All rights reserved.
 //
 
-public extension Collection {
+public extension Sequence {
 	
 	/// Evaluates the 2 results of combining the elements of the sequence using the
 	/// given closures. Finally, the results are combined as one using the closure.

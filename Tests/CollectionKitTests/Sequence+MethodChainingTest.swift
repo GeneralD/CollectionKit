@@ -1,5 +1,5 @@
 //
-//  Collection+MethodChainingTest.swift
+//  Sequence+MethodChainingTest.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2020/12/29.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionChainingTest: XCTestCase {
+class SequenceMethodChainingTest: XCTestCase {
 	
 	private struct Person {
 		let name: String

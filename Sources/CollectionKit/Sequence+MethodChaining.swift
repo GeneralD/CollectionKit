@@ -1,5 +1,5 @@
 //
-//  Collection+Chaining.swift
+//  Sequence+MethodChaining.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2020/12/29.
@@ -33,21 +33,21 @@
 /// let sumAge = people[].age.reduce(0, +) // 60
 /// ```
 @dynamicMemberLookup
-public struct ArrayMemberLookupReference<C: Collection> {
-	fileprivate let source: C
+public struct ArrayMemberLookupReference<S: Sequence> {
+	fileprivate let source: S
 	
-	subscript<Property>(dynamicMember keyPath: KeyPath<C.Element, Property>) -> [Property] {
+	subscript<Property>(dynamicMember keyPath: KeyPath<S.Element, Property>) -> [Property] {
 		source.map { t in t[keyPath: keyPath] }
 	}
 }
 
-public extension Collection {
+public extension Sequence {
 	subscript() -> ArrayMemberLookupReference<Self> {
 		.init(source: self)
 	}
 }
 
-public extension Collection where Element: Collection {
+public extension Sequence where Element: Sequence {
 	subscript() -> ArrayMemberLookupReference<[Element.Element]> {
 		.init(source: lazy.flatten)
 	}

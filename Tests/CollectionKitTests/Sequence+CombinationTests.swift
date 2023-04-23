@@ -1,5 +1,5 @@
 //
-//  Collection+CombinationTests.swift
+//  Sequence+CombinationTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionCombinationTests: XCTestCase {
+class SequenceCombinationTests: XCTestCase {
 	
 	private let a = 1...5
 	

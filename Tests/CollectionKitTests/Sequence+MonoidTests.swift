@@ -1,5 +1,5 @@
 //
-//  Collection+MonoidTests.swift
+//  Sequence+MonoidTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2020/02/28.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionMonoidTests: XCTestCase {
+class SequenceMonoidTests: XCTestCase {
 	
 	func testSumMonoid() {
 		XCTAssertEqual([1, 2, 3, 4, 5].map(Sum.init).joined.run, 15)

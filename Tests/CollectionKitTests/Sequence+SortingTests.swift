@@ -1,5 +1,5 @@
 //
-//  Collection+SortingTests.swift
+//  Sequence+SortingTests.swift
 //  
 //
 //  Created by Yumenosuke Koukata on 2020/10/22.
@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 @testable import CollectionKit
 
-class CollectionSortingTests: XCTestCase {
+class SequenceSortingTests: XCTestCase {
 	
 	private struct Genius: Equatable {
 		let id: Int

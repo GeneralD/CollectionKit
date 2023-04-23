@@ -1,5 +1,5 @@
 //
-//  Collection+Monoid.swift
+//  Sequence+Monoid.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2020/02/28.
@@ -20,7 +20,7 @@ public protocol Monoid {
 	static func +(lhs: Self, rhs: Self) -> Self
 }
 
-public extension Collection where Element: Monoid {
+public extension Sequence where Element: Monoid {
 	
 	/// `reduce(_:_:)` with `initialResult` = `zero`
 	///

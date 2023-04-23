@@ -1,5 +1,5 @@
 //
-//  Collection+AggregationTests.swift
+//  Sequence+AggregationTests.swift
 //  CollectionKitTests
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import CollectionKit
 
-class CollectionAggregationTests: XCTestCase {
+class SequenceAggregationTests: XCTestCase {
 	
 	private let a = [2, -69, 66, -18, 0, 7, 81]
 	private let c = "Functional Programming is the best solution!"

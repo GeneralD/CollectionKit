@@ -1,5 +1,5 @@
 //
-//  Collection+Monad.swift
+//  Sequence+Monad.swift
 //  CollectionKit
 //
 //  Created by Yumenosuke Koukata on 2019/11/28.
@@ -31,7 +31,7 @@ fileprivate func `return`<L: Error, R>(_ t: R) -> Either<L, R> {
 
 // MARK: - FilterM
 
-public extension Collection {
+public extension Sequence {
 	
 	/// This function is brought from Haskell.
 	///
@@ -99,7 +99,7 @@ public extension Collection {
 
 // MARK: - MapM
 
-public extension Collection {
+public extension Sequence {
 	
 	/// This function is brought from Haskell.
 	///
